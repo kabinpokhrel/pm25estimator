@@ -30,6 +30,7 @@ class SeleniumDriver:
 
     def get(self):
         driver = self.get_driver()
+        time.sleep(2)
         driver.get(self.url)
         self.perform_endless_scroll(driver=driver)
         # return driver.page_source
@@ -51,6 +52,15 @@ class SeleniumDriver:
                 if current_height == iter_height:
                     break
                 current_height = iter_height
+
+
+    def wait_until_page_is_loaded(self, driver=None):
+        """ This method will wait until the page is loaded. """
+        if driver is None:
+            return False
+        page_state = driver.execute_script('return document.readyState;')
+        return page_state == 'complete'
+
     
 
 

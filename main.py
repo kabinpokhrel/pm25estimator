@@ -25,8 +25,11 @@ def main():
     epa_url = "https://www.epa.gov/outdoor-air-quality-data/download-daily-data"
     epa_driver = SeleniumDriver(url=epa_url, endless_scroll=False)
     epa_driver.get()
-
+    
     epa_data_scraper = EPADataBrowser(epa_driver.driver)
+    # implement waiting strategy
+    epa_data_scraper.wait_until_page_is_loaded()
+    print("Driver is ready to use. Initiating filling the form.")
     download_sucess = epa_data_scraper.complete_form_and_submit(data_for_year, pollutant, state, site)
     if (download_sucess):
         epa_driver.close()

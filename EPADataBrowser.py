@@ -11,6 +11,14 @@ class EPADataBrowser:
         self.driver = driver
         self.download_success = False
 
+    def wait_until_page_is_loaded(self):
+        """ This method will wait until the page is loaded. """
+        if self.driver is None:
+            return False
+        else:
+            time.sleep(2)
+            return True
+        
     def complete_form_and_submit(self, data_for_year=2008, pollutant="PM2.5", state="North Carolina", site="All Sites"):
         # Select the pollutant
         pollutant_select = self.driver.find_element(By.ID, "poll")
