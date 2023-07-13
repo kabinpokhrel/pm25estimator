@@ -1,0 +1,9 @@
+
+/pm25venv
+/__pycache__
+
+.Ds_Store
+*.pyc
+Spring.csv
+Summer.csv
+Fall_winter.csv

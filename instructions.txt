@@ -1,0 +1,17 @@
+// Read the following notes before running the program
+// Note 1. The program is written in Python 3.7.3
+
+// Steps to run the program
+// Step 1. Clone the repo
+// git clone repo_location
+// cd pm25estimator
+
+// Step 2. Create virtual environment and activate it: python3 -m venv pm25venv
+// source pm25venv/bin/activate
+// pip install --upgrade pip
+
+// Step 3. Install requirements: pip install -r requirements.txt
+// pip install -r requirements.txt
+
+// Step 4. python main.py
+// Step 6. python prepare_data.py
