@@ -1,7 +1,7 @@
 
 /pm25venv
 /__pycache__
-
+/chromedriver_mac64
 .Ds_Store
 *.pyc
 Spring.csv
